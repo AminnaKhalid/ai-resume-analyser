@@ -1,0 +1,27 @@
+# Python Virtual Environment
+venv/
+.venv/
+env/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django Specific
+db.sqlite3
+.env
+media/
+staticfiles/
+
+# Node/React (Frontend)
+node_modules/
+build/
+dist/
+.eslintcache
+
+# Editor Settings
+.vscode/
+.idea/
+.DS_Store
