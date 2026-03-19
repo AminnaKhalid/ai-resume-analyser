@@ -21,8 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-qo@7+p*luwh-85-jfumhivcv8^%7w!v8w84n1y1m^8ioi@$efm'
-
+SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -145,11 +144,10 @@ REST_FRAMEWORK = {
 
 # for cloudinary storage
 
-CLOUDINARY_STORAGE  ={
-    'CLOUD_NAME':'ddowgzbya',
-    'API_KEY':'848453978792282',
-    'API_SECRET':'4C6xnI2JSq26TNe2AyjZyQwk_pg',
-
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': config('CLOUDINARY_API_KEY'),
+    'API_SECRET': config('CLOUDINARY_API_SECRET'),
 }
 
 DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'

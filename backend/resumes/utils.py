@@ -4,7 +4,7 @@ import json
 import os
 from groq import Groq
 
-GROQ_API_KEY = "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" 
+GROQ_API_KEY = config('GROQ_API_KEY')
 
 client = Groq(api_key=GROQ_API_KEY)
 
