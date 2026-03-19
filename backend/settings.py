@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'resumes',
+
+    # cloudinary
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +140,16 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+
+
+# for cloudinary storage
+
+CLOUDINARY_STORAGE  ={
+    'CLOUD_NAME':'ddowgzbya',
+    'API_KEY':'848453978792282',
+    'API_SECRET':'4C6xnI2JSq26TNe2AyjZyQwk_pg',
+
+}
+
+DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
