@@ -3,6 +3,7 @@ import io
 import json
 import os
 from groq import Groq
+from decouple import config
 
 GROQ_API_KEY = config('GROQ_API_KEY')
 
